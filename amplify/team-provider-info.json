@@ -1,0 +1,23 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-gpufinder-dev-140255-authRole",
+      "UnauthRoleArn": "arn:aws:iam::375615756048:role/amplify-gpufinder-dev-140255-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::375615756048:role/amplify-gpufinder-dev-140255-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-gpufinder-dev-140255-deployment",
+      "UnauthRoleName": "amplify-gpufinder-dev-140255-unauthRole",
+      "StackName": "amplify-gpufinder-dev-140255",
+      "StackId": "arn:aws:cloudformation:us-east-1:375615756048:stack/amplify-gpufinder-dev-140255/5cd12660-ad37-11ec-b49c-0e52bea8e7c9",
+      "AmplifyAppId": "d1p37atzhq5wzy"
+    },
+    "categories": {
+      "function": {
+        "fetchVideoCards": {
+          "deploymentBucketName": "amplify-gpufinder-dev-140255-deployment",
+          "s3Key": "amplify-builds/fetchVideoCards-7a2f62776a4e376b5845-build.zip"
+        }
+      }
+    }
+  }
+}

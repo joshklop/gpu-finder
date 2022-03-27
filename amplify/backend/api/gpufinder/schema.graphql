@@ -1,0 +1,21 @@
+# This "input" configures a global authorization rule to enable public access to
+# all models in this schema. Learn more about authorization rules here: https://docs.amplify.aws/cli/graphql/authorization-rules
+input AMPLIFY { globalAuthRule: AuthRule = { allow: public } } # FOR TESTING ONLY!
+
+type VideoCard @model {
+  id: ID!
+  name: String!
+  url: String!
+  rank: Int
+  price: Float!
+}
+
+type VideoCardRank @model {
+  id: ID!
+  name: String!
+  rank: Int!
+}
+
+type Query {
+  fetchedVideoCards: [VideoCard] @function(name: "fetchVideoCards-${env}")
+}
