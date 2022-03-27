@@ -1,32 +1,30 @@
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown, faAngleUp} from '@fortawesome/free-solid-svg-icons'
 import { useMemo, useState } from 'react';
 import { useTable, useSortBy, useGlobalFilter, Column } from 'react-table';
 import './Table.css';
 import GlobalFilter from './TableGlobalFilter';
-import src1 from './gpu.jpeg';
-import src2 from './gpu2.jpeg';
-import src3 from './gpu3.jpeg';
-
-import { API, graphqlOperation } from 'aws-amplify';
-import { fetchedVideoCards } from '../graphql/queries';
+import src1 from './gpu1.png';
+import src2 from './gpu2.png';
+import src3 from './gpu3.png';
 
 export default function Table(_: Object) {
   const data = useMemo(
     () => [
       {
-        name: 'nvidia-geforce',
-        price: 500,
-        image: src2,
-      },
-      {
-        name: 'nvidia-tesla',
-        price: 389.99,
+        name: 'Open Box: GIGABYTE Radeon RX 6900 XT',
+        price: 1249,
         image: src1,
       },
       {
-        name: 'asus-tuf',
-        price: 181,
+        name: 'NVIDIA GeForce RTX 3090',
+        price: 2238.39,
+        image: src2,
+      },
+      {
+        name: 'AMD Radeon RX 6800 XT CORE',
+        price: 1099,
         image: src3,
       },
     ],
@@ -37,7 +35,7 @@ export default function Table(_: Object) {
       {
         Header: 'Name',
         accessor: 'name',
-        Cell: ({ value }) => <a href="https://www.amazon.com/NVIDIA-900-22080-0000-000-PCI-Express-Passive-Cooling/dp/B01JBMII42/ref=sr_1_2?crid=RKPSLN4665B1&keywords=nvidia+tesla&qid=1648368205&sprefix=nvidia+tesla%2Caps%2C108&sr=8-2">{value}</a>
+        Cell: ({ value }) => <a href='https://www.newegg.com/gigabyte-radeon-rx-6900-xt-gv-r69xtgaming-oc-16gd/p/N82E16814932414R'>{value}</a>,
       },
       {
         Header: 'Price',
@@ -49,7 +47,7 @@ export default function Table(_: Object) {
         accessor: 'image',
         disableSortBy: true,
         disableFilters: true,
-        Cell: ({ value }) => <img height={100} width={100} src={value}/>,
+        Cell: ({ value }) => <img height={100} width={200} src={value}/>,
       }
     ],
     []
