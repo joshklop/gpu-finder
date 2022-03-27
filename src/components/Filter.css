@@ -8,7 +8,7 @@ input {
 }
 
 input:active, input:focus {
-  outline-color: aliceblue;
+  outline-color: #9fc9fc;
 }
 
 ::placeholder {

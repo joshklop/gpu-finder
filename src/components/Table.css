@@ -12,13 +12,24 @@ table {
 }
 
 th {
-  background-color: aliceblue;
+  background-color: #9fc9fc;
   color: black;
   font-weight: bold;
-  padding: 10px;
+  padding: 10px 10px 10px 10px;
   border-radius: 5px;
+}
+
+th:hover {
+  box-shadow: 0px 0px 0px 0px;
 }
 
 td {
   padding: 5px;
+  border-radius: 5px;
+}
+
+tr:hover {
+  background-color: aliceblue;
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px aliceblue;
 }

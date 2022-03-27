@@ -4,6 +4,7 @@ import { useMemo } from 'react';
 import { useTable, useSortBy, useGlobalFilter, Column } from 'react-table';
 import './Table.css';
 import GlobalFilter from './TableGlobalFilter';
+import src from './gpu.jpeg';
 
 export default function Table(_: Object) {
   const data = useMemo(
@@ -11,19 +12,22 @@ export default function Table(_: Object) {
       {
         name: 'gpu',
         price: 0,
+        image: src,
       },
       {
         name: 'another-gpu',
         price: 1,
+        image: src,
       },
       {
         name: 'another-another-gpu',
         price: 2,
+        image: src,
       },
     ],
     []
   );
-  const columns = useMemo<Column<{name: string, price: Number}>[]>(
+  const columns = useMemo<Column<{name: string, price: Number, image: string}>[]>(
     () => [
       {
         Header: 'Name',
@@ -34,6 +38,13 @@ export default function Table(_: Object) {
         accessor: 'price',
         Cell: ({ value }) => `\$${value}`,
       },
+      {
+        Header: 'Image',
+        accessor: 'image',
+        disableSortBy: true,
+        disableFilters: true,
+        Cell: ({ value }) => <img height={100} width={100} src={value}/>,
+      }
     ],
     []
   );
